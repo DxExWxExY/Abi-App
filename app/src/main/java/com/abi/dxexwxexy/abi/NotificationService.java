@@ -10,8 +10,6 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 
-import static android.content.Context.NOTIFICATION_SERVICE;
-
 /**
  * Created by DxExWxExY on 1/3/2018.
  */
