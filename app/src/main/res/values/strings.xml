@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Abimm</string>
+    <string name="channel">Abimm</string>
+    <string name="channel_description">Log in to check what\'s new</string>
 </resources>
