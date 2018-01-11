@@ -2,7 +2,9 @@ package com.abi.dxexwxexy.abi;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -27,6 +29,11 @@ public class login extends AppCompatActivity {
         abiSettings.setJavaScriptEnabled(true);
         abi.loadUrl("https://ess.abimm.com/");
         notifierAlarm();
+        ComponentName receiver = new ComponentName(this, AlarmBootReceiver.class);
+        PackageManager pm = this.getPackageManager();
+        pm.setComponentEnabledSetting(receiver,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP);
     }
 
     public void notifierAlarm() {
