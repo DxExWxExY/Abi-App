@@ -1,6 +1,5 @@
 package com.abi.dxexwxexy.abi;
 
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -10,8 +9,6 @@ import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
-
-import java.util.GregorianCalendar;
 
 /**
  * Created by DxExWxExY on 1/3/2018.
@@ -28,7 +25,7 @@ public class NotificationService extends BroadcastReceiver {
                 .setContentIntent(launchIntent)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle("Check Your Account")
-                .setContentText("Login to confirm or change availability.")
+                .setContentText("Login to see the latest updates.")
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setVibrate(new long[] { 500, 1000})
                 .setLights(Color.DKGRAY, 500, 1000)
