@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\DxExWxExY\Documents\Android Studio\Abimm\Abi.iml" filepath="C:\Users\DxExWxExY\Documents\Android Studio\Abimm\Abi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Abimm.iml" filepath="$PROJECT_DIR$/Abimm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Abi.iml" filepath="$PROJECT_DIR$/Abi.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\DxExWxExY\Documents\Android Studio\Abimm\app\app.iml" filepath="C:\Users\DxExWxExY\Documents\Android Studio\Abimm\app\app.iml" />
     </modules>
   </component>
 </project>

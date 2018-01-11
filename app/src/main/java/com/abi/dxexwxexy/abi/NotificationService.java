@@ -6,9 +6,12 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
+
+import java.util.GregorianCalendar;
 
 /**
  * Created by DxExWxExY on 1/3/2018.
@@ -17,7 +20,6 @@ import android.support.v4.app.NotificationCompat;
 public class NotificationService extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Uri sound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationManager notification = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         Intent openApp = new Intent(context, login.class);
         openApp.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -26,9 +28,12 @@ public class NotificationService extends BroadcastReceiver {
                 .setContentIntent(launchIntent)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle("Check Your Account")
-                .setContentText("Login to check to confirm or change availability")
-                .setSound(sound)
-                .setAutoCancel(true);
+                .setContentText("Login to confirm or change availability.")
+                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
+                .setVibrate(new long[] { 500, 1000})
+                .setLights(Color.DKGRAY, 500, 1000)
+                .setAutoCancel(true)
+                .setColor(Color.BLACK);
         notification.notify(1, dailyNotification.build());
     }
 }
